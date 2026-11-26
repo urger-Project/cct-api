@@ -64,3 +64,6 @@ Ministério do Trabalho e Emprego. O projeto não é afiliado ao MTE nem aos sin
 
 MIT.
 
+Contribuições são bem-vindas. Consulte [CONTRIBUTING.md](CONTRIBUTING.md), a
+[política de segurança](SECURITY.md) e o [modelo de dados](docs/data-model.md).
+
