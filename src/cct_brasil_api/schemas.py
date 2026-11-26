@@ -16,7 +16,7 @@ class Union(BaseModel):
     acronym: str | None = None
     cnpj: str | None = None
     side: str = Field(description="laboral ou patronal")
-    states: list[str] = []
+    states: list[str] = Field(default_factory=list)
 
 
 class InstrumentSummary(BaseModel):
@@ -24,16 +24,16 @@ class InstrumentSummary(BaseModel):
     instrument_type: InstrumentType
     title: str
     category: str | None = None
-    states: list[str] = []
-    municipalities: list[str] = []
+    states: list[str] = Field(default_factory=list)
+    municipalities: list[str] = Field(default_factory=list)
     valid_from: date | None = None
     valid_until: date | None = None
-    unions: list[Union] = []
+    unions: list[Union] = Field(default_factory=list)
     official_source_url: HttpUrl | None = None
 
 
 class InstrumentDetail(InstrumentSummary):
-    clauses: list[str] = []
+    clauses: list[str] = Field(default_factory=list)
 
 
 class InstrumentList(BaseModel):
